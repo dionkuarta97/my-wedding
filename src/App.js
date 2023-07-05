@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import FirstScreen from "./screen/FirstScreen";
+import lagu from "./assets/lagu.mp3";
+import { Routes, Route, Navigate } from "react-router-dom";
+import SecondScreen from "./screen/SecondScreen";
 
 function App() {
+  const [audio] = useState(new Audio(lagu));
+  const [screen, setScreen] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <FirstScreen
+              undangan={false}
+              onClick={() => {
+                audio.play();
+                setScreen(2);
+              }}
+            />
+          }
+        />
+        <Route
+          path="/undangan"
+          element={
+            <FirstScreen
+              undangan={true}
+              onClick={() => {
+                audio.play();
+                setScreen(2);
+              }}
+            />
+          }
+        />
+        <Route
+          path="/wedding"
+          element={
+            screen !== 2 ? (
+              <>
+                {localStorage.getItem("to") ? (
+                  <Navigate to={"/undangan?to=" + localStorage.getItem("to")} />
+                ) : (
+                  <Navigate to={"/"} />
+                )}
+              </>
+            ) : (
+              <SecondScreen
+                pause={() => audio.pause()}
+                playing={() => audio.play()}
+              />
+            )
+          }
+        />
+      </Routes>
+    </>
   );
 }
 

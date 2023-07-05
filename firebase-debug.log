@@ -1,0 +1,14 @@
+[debug] [2022-01-30T21:47:20.079Z] ----------------------------------------------------------------------
+[debug] [2022-01-30T21:47:20.080Z] Command:       /opt/homebrew/Cellar/node/17.3.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2022-01-30T21:47:20.080Z] CLI Version:   10.1.2
+[debug] [2022-01-30T21:47:20.080Z] Platform:      darwin
+[debug] [2022-01-30T21:47:20.081Z] Node Version:  v17.3.0
+[debug] [2022-01-30T21:47:20.081Z] Time:          Mon Jan 31 2022 04:47:20 GMT+0700 (Western Indonesia Time)
+[debug] [2022-01-30T21:47:20.081Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-30T21:47:20.107Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-30T21:47:20.107Z] > authorizing via signed-in user (diondpkp97@gmail.com)
+[debug] [2022-01-30T21:47:20.107Z] [iam] checking project my-wedding-6ba4c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-01-30T21:47:20.108Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-01-30T21:47:20.108Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

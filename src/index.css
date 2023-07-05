@@ -1,13 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Quintessential&family=Supermercado+One&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: "100%";
+  background-color: #ffe0b2 !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  display: inline-block;
+  width: 668px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 668px) {
+  img {
+    width: 100%;
+  }
+}
+.box {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
